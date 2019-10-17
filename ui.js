@@ -33,6 +33,8 @@ class UI {
   
   // Show alert
   showAlert(message, className) {
+    // Clear any remainings alerts
+    this.clearAlert();
     // Create div
     const div = document.createElement('div');
     // Add classes
@@ -45,6 +47,15 @@ class UI {
     const search = document.querySelector('.search');
     // Insert alert
     container.insertBefore(div, search);
+  }
+
+  // Clear alert message
+  clearAlert() {
+    const currentAlert = document.querySelector('.alert');
+
+    if(currentAlert) {
+      currentAlert.remove();
+    }
   }
 
   // Clear profile

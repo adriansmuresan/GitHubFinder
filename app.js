@@ -9,4 +9,4 @@ searchUser.addEventListener('keyup', (e) => {
   if(userText !== ''){
  
   }
-})
+});
